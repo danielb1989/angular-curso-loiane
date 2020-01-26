@@ -1,20 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+import { MeuFormModule } from './meu-form';
 
 import { AppComponent } from './app.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { MeuFormComponent } from './meu-form/meu-form.component';
-import { InputPropertyComponent } from './input-property/input-property.component';
-import { OutputPropertyComponent } from './output-property/output-property.component';
-import { CicloComponent } from './ciclo/ciclo.component';
-import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
+import { DataBindingComponent } from './data-binding';
+// import { MeuFormComponent } from './meu-form/meu-form.component';
+import { InputPropertyComponent } from './input-property';
+import { OutputPropertyComponent } from './output-property';
+import { CicloComponent } from './ciclo';
+import { DiretivaNgifComponent } from './diretiva-ngif';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    MeuFormComponent,
+    // MeuFormComponent,
     InputPropertyComponent,
     OutputPropertyComponent,
     CicloComponent,
@@ -22,7 +24,8 @@ import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MeuFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

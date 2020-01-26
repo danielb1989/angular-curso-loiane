@@ -14,20 +14,20 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
   // Aula 10
-  url: string = 'http://loiane.com';
-  cursoAngular: boolean = true;
-  urlImagem: string = 'https://i.picsum.photos/id/723/200/300.jpg';
+  url = 'http://loiane.com';
+  cursoAngular = true;
+  urlImagem = 'https://i.picsum.photos/id/723/200/300.jpg';
 
   // Aula 11
-  valorAtual: string = '';
-  valorSalvo: string = '';
-  isMouseOver: boolean = false;
+  valorAtual = '';
+  valorSalvo = '';
+  isMouseOver = false;
 
   // Aula 13
-  nomeDoCurso: string = 'Angular';
+  nomeDoCurso = 'Angular';
 
   // Aula 14
-  valorInicial: number = 15;
+  valorInicial = 15;
 
   // Aula 14
   onMudouValor(evento) {

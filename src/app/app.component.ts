@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  valor: number = 5;
 
-  deletarCiclo: boolean = false;
+  valor = 5;
+
+  deletarCiclo = false;
 
   destruirCiclo() {
     this.deletarCiclo = true;
