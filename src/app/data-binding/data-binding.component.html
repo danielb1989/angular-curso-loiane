@@ -1,0 +1,101 @@
+<div class="container">
+
+    <section class="property-binding">
+        <article>
+            <h3>Input/Output Properties</h3>
+
+            <app-curso [nome]="nomeDoCurso"></app-curso>
+
+            <contador [valor]="valorInicial"
+            (mudouValor)="onMudouValor($event)"
+            ></contador>
+
+        </article>
+    </section>
+
+    <section class="property-binding">
+
+        <app-meu-form></app-meu-form>
+
+        <hr>
+
+        <article>
+            <h3>Event Binding</h3>
+
+            <div>
+                <button (click)="botaoClicado()" class="btn btn-primary">
+                    Me clique!
+                </button>
+
+                <br><br>
+
+                <input type="text" 
+                    (keyup)="onKeyUp($event)"
+                    (keyup.enter)="salvarValor($event.target.value)"
+
+                    #campoInput
+                    (blur)="salvarValor(campoInput.value)">
+
+                <p>Valor Atual: {{ valorAtual }}</p>
+                <p>Valor Salvo: {{ valorSalvo }}</p>
+
+                <!-- Se isMouseOver for true, aplica a classe highlight no <p> -->
+                <p (mouseover)="onMouseOverOut()"
+                    (mouseout)="onMouseOverOut()"
+                    [class.highlight]="isMouseOver"
+                    >
+                Passe o mouse sobre mim.</p>
+
+            </div>
+
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>Class e Style Binding</h3>
+            <div>
+                Selecione uma classe:
+                <select #classe (change)="0">
+                    <option value="alert-success">success</option>
+                    <option value="alert-info">info</option>
+                    <option value="alert-warning">warning</option>
+                    <option value="alert-danger">danger</option>
+                </select>
+                <br><br>
+
+                <div class="alert {{ classe.value }}" role="alert">
+                    O texto colorido conforme valor do combobox
+                </div>
+
+                <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">success</div>
+                <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">info</div>
+                <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">warning</div>
+                <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">danger</div>
+
+                <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+                    Esse texto somente aparece em caso de danger.
+                </div>
+
+            </div>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>Interpolation</h3>
+            <p>String renderizada com interpolação: {{ url }}</p>
+            <p>Resultado de 1 + 1 é: {{ 1 + 1}} </p>
+            <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }} </p>
+            <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }} </p>
+        </article>
+        <article>
+            <h3>Property Binding</h3>
+            <img src="{{ urlImagem }}" alt="">
+            <img [src]="urlImagem" alt="">
+            <img bind-src="urlImagem" alt="">
+        </article>
+
+    </section>
+
+</div>
