@@ -2,13 +2,7 @@
 
 Curso de Angular Gratuito e Completo com Loiane Groner, [Link do Curso no YouTube](https://www.youtube.com/watch?v=tPOMG0D57S0&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G&index=1).
 
-Mais informações sobre a Loiane
-
-Blog: https://loiane.com
-Site: https://loiane.training
-Facebook: https://www.facebook.com/loianegroner
-Github: https://github.com/loiane
-Twitter: https://twitter.com/loiane
+Mais informações sobre a Loiane: Blog: https://loiane.com, Site: https://loiane.training, Facebook: https://www.facebook.com/loianegroner, Github: https://github.com/loiane, Twitter: https://twitter.com/loiane
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
