@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [class.active]="aba == 'home'">
+          <a class="nav-link" href="#"
+          (click)="aba = 'home'"
+          >Home <span class="sr-only" *ngIf="aba == 'home'">(current)</span></a>
+        </li>
+        <li class="nav-item" [class.active]="aba == 'features'">
+          <a class="nav-link" href="#"
+          (click)="aba = 'features'"
+          >Features</a>
+        </li>
+        <li class="nav-item" [class.active]="aba == 'pricing'">
+          <a class="nav-link" href="#"
+          (click)="aba = 'pricing'"
+          >Pricing</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" [ngSwitch]="aba">
+
+    <p *ngSwitchDefault>Página home</p>
+    <p *ngSwitchCase="'features'">Modo features ativado!</p>
+    <p *ngSwitchCase="'pricing'">Modo pricing ativado!</p>
+
+  </div>
