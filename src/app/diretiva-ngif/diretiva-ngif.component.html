@@ -26,5 +26,18 @@
         Não existem cursos para serem listados
     </div>
 
+    <!-- Aula 28 -->
+    <h5>Removendo o * e usando template</h5>
+    <div *ngIf="mostrarCursos">
+        Lista de Cursos
+    </div>
+
+    <ng-template [ngIf]="mostrarCursos">
+        <div>Lista de Cursos Aqui.</div>
+    </ng-template>
+
+    <div template="ngIf mostrarCursos">
+        Lista de Cursos template
+    </div>
 
  </div>

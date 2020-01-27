@@ -19,10 +19,27 @@
       </ul>
     </div>
   </nav>
+
   <div class="container" [ngSwitch]="aba">
 
     <p *ngSwitchDefault>Página home</p>
     <p *ngSwitchCase="'features'">Modo features ativado!</p>
     <p *ngSwitchCase="'pricing'">Modo pricing ativado!</p>
+
+  </div>
+
+  <!-- Aula 28 -->
+  <h5>Removendo o * e usando template</h5>
+  <div class="container" [ngSwitch]="aba">
+
+    <ng-template [ngSwitchCase]="'features'">
+      <p>Modo features ativado!</p>  
+    </ng-template>
+    <ng-template [ngSwitchCase]="'pricing'">
+      <p>Modo pricing ativado!</p>  
+    </ng-template>
+    <ng-template [ngSwitchCase]="'aba'" ngSwitchDefault>
+      <p>Página home</p>  
+    </ng-template>
 
   </div>
