@@ -5,7 +5,10 @@ import { CursosService } from './cursos.service';
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.scss']
+  styleUrls: ['./cursos.component.scss'],
+  // Caso queira uma instância do serviço separada, para cada componente, declare abaixo
+  // PS.: Aparecerão dois logs do serviço no console
+  // providers: [CursosService]
 })
 export class CursosComponent implements OnInit {
 
