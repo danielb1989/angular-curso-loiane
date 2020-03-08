@@ -8,7 +8,7 @@ import { CursosService } from '../cursos/cursos.service';
   styleUrls: ['./criar-curso.component.scss'],
   // Caso queira uma instância do serviço separada, para cada componente, declare abaixo
   // PS.: Aparecerão dois logs do serviço no console
-  // providers: [CursosService]
+  providers: [CursosService]
 })
 export class CriarCursoComponent implements OnInit {
 
